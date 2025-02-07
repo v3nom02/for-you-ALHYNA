@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- SwiperJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Be My Valentine</title>
+
+    <style>
+      body {
+        text-align: center;
+        font-family: "Courier";
+        background-color: #000000;
+        color: #ff9494;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .responsive {
+        width: 250px;
+        height: auto;
+        margin-top: 20px;
+      }
+
+      .image-text {
+        font-size: 20px;
+        color: #e67373;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      #valentineQuestion {
+        font-size: 50px;
+        color: #e67373;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .answerButton {
+        padding: 10px 20px;
+        font-size: 25px;
+        cursor: pointer;
+        margin: 10px;
+        font-family: "Courier";
+        background-color: #ffe3e1;
+        color: #e67373;
+        border-radius: 12px;
+        border: 2px solid #ffe3e1;
+        transition: 0.3s;
+      }
+
+      .answerButton:hover {
+        background-color: #ff9494;
+        color: #ffe3e1;
+        border: 2px solid #ff9494;
+      }
+     /* Floating Bouncing Hearts Background */
+@keyframes floatingHearts {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translateY(-40px) scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-80px) scale(1);
+  }
+  75% {
+    transform: translateY(-120px) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-160px) scale(1);
+    opacity: 0;
+  }
+}
+
+.heart-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.heart {
+  position: absolute;
+  font-size: 50px; /* Made hearts bigger */
+  color: #ff4d6d;
+  animation: floatingHearts 6s infinite ease-in-out; /* Longer screen time */
+  opacity: 0;
+}
+
+    </style>
+  </head>
+  <!-- Floating Bouncing Hearts Background -->
+<div class="heart-bg">
+  <span class="heart" style="top: 10%; left: 20%;">❤️</span>
+  <span class="heart" style="top: 25%; left: 50%;">💖</span>
+  <span class="heart" style="top: 40%; left: 75%;">💕</span>
+  <span class="heart" style="top: 60%; left: 35%;">💞</span>
+  <span class="heart" style="top: 80%; left: 15%;">❤️</span>
+  <span class="heart" style="top: 90%; left: 70%;">💖</span>
+  <span class="heart" style="top: 50%; left: 10%;">💕</span>
+</div>
+
+
+  <body>
+    <audio controls autoplay loop>
+      <source src="SB19 - NYEBE.mp3" type="audio/mpeg" /> 
+      Your browser does not support the audio element.
+    </audio>
+    
+    
+    play this love hope you will have comfort >3
+    
+    <p>JUST SWIPE PO LOVE</p>
+
+    <!-- Swiper Container -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <p class="image-text">My Love's First Picture 💖</p>
+          <img src="alhyna my baby.jpg" alt="photo1" class="responsive" />
+        </div>
+
+        <div class="swiper-slide">
+          <p class="image-text">Her Cutest Smile 😍</p>
+          <img src="alhyna.jpg" alt="photo2" class="responsive" />
+        </div>
+
+        <div class="swiper-slide">
+          <p class="image-text">The Love of My Life ❤️</p>
+          <img src="lovey.jpg" alt="photo3" class="responsive" />
+        </div>
+
+        <div class="swiper-slide">
+          <p class="image-text">The Most Beautiful Woman Ever 🥰</p>
+          <img src="beautiful.jpg" alt="photo4" class="responsive" />
+        </div>
+
+        <div class="swiper-slide">
+          <p class="image-text">My Forever Baby 💘</p>
+          <img src="cute.jpg" alt="photo5" class="responsive" />
+        </div>
+
+        <!-- Last Slide (Valentine Question) -->
+        <div class="swiper-slide">
+          <p id="valentineQuestion"><b>Will you be my valentine?</b></p>
+          <button class="answerButton" id="yesButton" onclick="location.href='thankyou.html'">Yes</button>
+          <button class="answerButton" id="noButton">I don't wanna(but try to click me haha) (╥﹏╥)</button>
+        </div>
+      </div>
+
+      <!-- Pagination & Navigation Buttons -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      document.getElementById("noButton").addEventListener("click", function () {
+        var yesButton = document.getElementById("yesButton");
+        var currentFontSize = parseInt(window.getComputedStyle(yesButton).fontSize);
+        yesButton.style.fontSize = currentFontSize + 10 + "px";
+      });
+    </script>
+  </body>
+</html>

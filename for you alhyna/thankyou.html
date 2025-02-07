@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank you</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: "Courier";
+        background-color: #000000; /* Same as the index background */
+        color: #ff9494;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      #thankyou {
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+
+      .responsive {
+        width: 250px;
+        height: auto;
+        margin-top: 20px;
+      }
+
+      .button {
+        padding: 10px 20px;
+        font-size: 25px;
+        cursor: pointer;
+        margin: 10px;
+        font-family: "Courier";
+        background-color: #ffe3e1;
+        color: #e67373;
+        border-radius: 12px;
+        border: 2px solid #ffe3e1;
+        transition: 0.3s;
+      }
+
+      .button:hover {
+        background-color: #ff9494;
+        color: #ffe3e1;
+        border: 2px solid #ff9494;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="thankyou"><b>Thank you</b></div>
+    
+    <img id="rizz" src="yna.jpg" alt="rizzler god" class="responsive" />
+
+    <audio controls autoplay loop>
+      <source src="take a chance with me.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    
+    <h1>Don't go yet!</h1>
+    <button class="button" onclick="location.href='date.html'">Click me</button>
+  </body>
+</html>

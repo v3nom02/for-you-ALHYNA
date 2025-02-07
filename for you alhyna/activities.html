@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activities</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background: linear-gradient(to right, #000000, #000000); /* Light red gradient */
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+      #activityquestion {
+        font-size: 50px;
+        font-weight: bold;
+        color: #a81e1e;
+        margin-top: 20px;
+      }
+      .activities-selection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+      }
+      .activity-item {
+        background: #fff5e1; /* Light cream background */
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        min-width: 180px; /* Prevent shrinking */
+        text-align: center;
+        flex: 1 1 200px;
+      }
+      .activity-item img {
+        width: 100%;
+        height: 200px; /* Adjusted height for better consistency */
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      .activity-item label {
+        display: block;
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #8b0000;
+      }
+      .button {
+        background-color: #6f1919;
+        color: rgb(145, 118, 118);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 20px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      .button:hover {
+        background-color: #cc0000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="activityquestion">What are we doing after?</div>
+
+    <div class="activities-selection">
+      <div class="activity-item">
+        <img src="park.png" alt="aquarium" />
+        <label><input type="checkbox" name="activities" value="Park" />Park</label>
+      </div>
+      <div class="activity-item">
+        <img src="arcade.jpg" alt="arcade" />
+        <label><input type="checkbox" name="activities" value="Arcade" />Arcade</label>
+      </div>
+      <div class="activity-item">
+        <img src="cinema.webp" alt="cinema" />
+        <label><input type="checkbox" name="activities" value="Cinema" />Cinema</label>
+      </div>
+      <div class="activity-item">
+        <img src="kape.jpg" alt="ceramics" />
+        <label><input type="checkbox" name="activities" value="Coffee" />Coffee</label>
+      </div>
+      <div class="activity-item">
+        <img src="kalumala.jpg" alt="kunsthalle" />
+        <label><input type="checkbox" name="activities" value="City Lights" />City Lights</label>
+      </div>
+      <div class="activity-item">
+        <img src="question.gif" alt="park" />
+        <label><input type="checkbox" name="activities" value="Others?" />Other</label>
+      </div>
+    </div>
+
+    <button class="button" onclick="location.href='lastpage.html'">Last page</button>
+  </body>
+</html>
